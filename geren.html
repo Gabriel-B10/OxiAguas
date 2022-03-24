@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+ 
+<html>
+ 
+<head>
+    <style>
+        .campo {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            margin-block: 15px;
+        }
+       
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background: linear-gradient(40deg, cyan, white);
+        }
+       
+        .tela-gerente {
+            background-color: ghostwhite;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.25rem;
+            padding: 3.125em;
+            border-radius: 15px;
+        }
+       
+        .campo input {
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 3px;
+            font-size: 1.25rem;
+        }
+       
+        button {
+            background-color: rgb(72, 223, 228);
+            border: none;
+            border-radius: 15px;
+            font-size: 16px;
+            padding: 8px;
+            width: 100;
+            color: rgb(0, 0, 0);
+        }
+       
+        button:hover {
+            background-color: rgb(37, 189, 181);
+        }
+    </style>
+ 
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+ 
+<body>
+ 
+    <div class="tela-gerente">
+        <center>
+            <h1>Gerência</h1>
+        </center>
+ 
+        <div class="campo">
+            <label for="estoque">Estoque Total:</label>
+            <input type="text" placeholder="">
+           </div>
+   
+               <div class="campo">
+                <center> <label for="Garrafas Vendidas">Garrafas Vendidas:</label></center>
+ 
+            <div class="campo">
+                <label for="por dia">Por Dia:</label>
+                <input type="text" placeholder="">
+               </div>
+ 
+               <div class="campo">
+                <label for="por semana">Por Semana:</label>
+                <input type="text" placeholder="">
+               </div>
+ 
+               <div class="campo">
+                <label for="montante arrecadado">Montante Arrecadado:</label>
+                <select name="cars" id="cars" form="carform">
+                    <option value="volvo">Por dia</option>
+                    <option value="volvo">Por semana</option>
+                  </select>
+            </div>
+ 
+        <center><button>Sair</button></center>
+ 
+    </div>
+</body>
+ 
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+ 
+<html>
+<head>
+ 
+<title>Compre Seu Garrafão Agora</title>
+ 
+<style>
+ 
+.campo{
+ 
+display: flex;
+flex-direction: column;
+align-items: stretch;
+margin-block: 15px;
+}
+body {
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ background: linear-gradient(40deg, cyan, white);
+}
+ 
+.tela-compra{
+ background-color: ghostwhite;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ font-size: 1.25rem;
+ padding: 3.125em;
+ border-radius: 15px;
+}
+ 
+.campo input {
+ border: 1px solid rgb(0, 0, 0);
+ border-radius: 3px;
+ font-size: 1.25rem;
+}
+ 
+button {
+ background-color: rgb(72, 223, 228);
+ border: none;
+ border-radius: 15px;
+ font-size: 16px;
+ padding: 8px;
+ width: 100;
+ color: rgb(0, 0, 0);
+}
+ 
+button:hover {
+ background-color: rgb(37, 189, 181);
+}
+ 
+.quantidade input {
+    max-width: 5ch;
+}
+ 
+.lista .item {
+    display: flex;
+}
+ 
+.lista .item .campo {
+    margin-left: auto;
+}
+ 
+.item .item-descricao {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.item-descricao img {
+    width: 50%;
+}
+</style>
+ 
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+ 
+<body>
+    <div class="tela-compra">
+       <center><h1>Compre seu garrafão!</h1></center>
+ 
+ 
+       <div class="lista">
+           <div class="item">
+               <div class="item-descricao">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Indaia_logo.jpg" />
+                </div>
+               <div class="campo">
+                    <label for="quantidade">Quantidade:</label><br>
+                    <div id="quantidade"><button>+</button><input type="number" /><button>-</button></div>
+               </div>
+           </div>
+           <div class="item">
+            <div class="item-descricao">
+                <img src="data:image/png;base64,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"/>
+            </div>
+            <div class="campo">
+             <label for="quantidade">Quantidade:</label><br>
+             <div id="quantidade"><button>+</button><input type="number" /><button>-</button></div>
+            </div>
+        </div>
+       </div>
+ 
+       <div class="campo">
+        <label for="valor">Valor R$:</label>
+        <input type="text" placeholder="">
+       </div>
+ 
+      <div class="campo">
+            <label for="pagamento">Pagamento:</label>
+<select name = "forma_pagamento">
+                <option
+value="dinheiro">Dinheiro</option>
+                <option value="pix">Pix</option>
+              </select>
+        </div>
+ 
+        <center><textarea cols="40">Descrição de pagamento:</textarea></center><br>
+ 
+ 
+        <center><button>Finalizar Compra</button></center>
+ 
+    </div>
+</body>
+ 
+</html>
